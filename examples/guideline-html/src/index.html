@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="" />
+
+  <!-- 
+    The Web Robots Pages
+    Web Robots (also known as Web Wanderers, Crawlers, or Spiders), are programs that traverse the Web automatically. Search engines such as Google use them to index the web content, spammers use them to scan for email addresses, and they have many other uses.
+    https://www.robotstxt.org/
+  -->
+  <meta name="robots" content="index,follow" />
+
+  <!--
+    The Cache-Control HTTP header holds directives (instructions) for caching in both requests and responses. 
+    A given directive in a request does not mean the same directive should be in the response.
+
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  -->
+
+  <!--
+    By default, Safari on iOS detects any string formatted like a phone number and makes it a link that calls the number. 
+    Specifying telephone=no disables this feature.
+    
+    https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+  -->
+  <meta name="format-detection" content="telephone=no" />
+  
+  <!-- 
+    A favicon (favorite icon) is a tiny icon included along with a website, 
+    which is displayed in places like the browser's address bar, page tabs and bookmarks menu.
+
+    https://developer.mozilla.org/en-US/docs/Glossary/Favicon
+  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+
+  <!-- Search Engine Optimization -->
+  <title>Document</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="" />
+
+  <!-- Facebook Open Graph -->
+  <meta property="fb:app_id" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="" />
+
+  <!--
+    Using dns-prefetch
+
+    DNS-prefetch is an attempt to resolve domain names before resources get requested.
+    This could be a file loaded later or link target a user tries to follow.
+
+    https://developer.mozilla.org/en-US/docs/Web/Performance/dns-prefetch
+  -->
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-Y');
+  </script>
+</head>
+
+<body class="has-sidebar has-sidebar--2">
+  <!--[if lte IE 9]>
+  <noscript>
+    <div style="padding:10px;">
+      <strong>This web page requires JavaScript to be enabled.</strong><br />
+      JavaScript is an object-oriented computer programming language
+      commonly used to create interactive effects within web browsers.
+    </div>
+  </noscript>
+  <div style="padding:10px;">
+    You are using an <strong>outdated</strong> browser.
+    Please <a class="alert-link" href="https://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your
+    experience.
+  </div>
+  <![endif]-->
+
+  <a class="skip-link sr-only sr-only-focusable" href="#primary">Skip to content</a>
+
+  <div id="page" class="site">
+
+    <header id="masthead" class="site-header">
+      <div class="site-branding">
+        <a class="site-title" href="index.html">
+          <!-- //... -->
+        </a>
+      </div>
+      <nav id="page-nav" class="site-nav">
+        <!-- //... -->
+      </nav>
+    </header>
+
+
+    <div id="content" class="site-content">
+
+      <section id="hero" class="site-hero">
+        <!-- //... -->
+      </section>
+
+      <nav id="breadcrumb" class="site-breadcrumb">
+        <!-- //... -->
+      </nav>
+
+      <div id="main-content" class="main-area">
+        <div class="main-inner container-fluid">
+
+          <aside id="secondary" class="site-sidebar sidebar-1 sidebar-left">
+            <!-- //... -->
+          </aside>
+
+          <main id="primary" class="site-main">
+            <article class="page hentry">
+              <!-- //... -->
+            </article>
+          </main>
+
+          <aside id="tertiary" class="site-sidebar sidebar-2 sidebar-right">
+            <!-- //... -->
+          </aside>
+
+        </div><!-- .container -->
+      </div><!-- #main-content -->
+
+    </div><!-- #content -->
+
+
+    <footer id="colophon" class="site-footer">
+      <!-- //... -->
+    </footer>
+  </div><!-- #site -->
+
+
+  <!-- scripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

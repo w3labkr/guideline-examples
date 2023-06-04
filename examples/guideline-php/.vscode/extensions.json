@@ -1,0 +1,27 @@
+{
+    "recommendations": [
+        "zhuangtongfa.material-theme",
+        "vscode-icons-team.vscode-icons",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "alefragnani.project-manager",
+        "editorconfig.editorconfig",
+        "liximomo.sftp",
+        "ritwickdey.liveserver",
+        "christian-kohler.path-intellisense",
+        "hookyqr.beautify",
+        "esbenp.prettier-vscode",
+        "mrmlnc.vscode-autoprefixer",
+        "stylelint.vscode-stylelint",
+        "dbaeumer.vscode-eslint",
+        "davidanson.vscode-markdownlint",
+        "eg2.vscode-npm-script",
+        "christian-kohler.npm-intellisense",
+        "ikappas.phpcs",
+        "junstyle.php-cs-fixer",
+        "rifi2k.format-html-in-php",
+        "bmewburn.vscode-intelephense-client",
+        "sleistner.vscode-fileutils",
+        "compulim.indent4to2"
+    ]
+}

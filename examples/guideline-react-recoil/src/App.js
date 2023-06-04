@@ -1,0 +1,36 @@
+import React from "react";
+import { RecoilRoot } from "recoil";
+import { Counter, CounterInfo } from "./components/counter";
+import logo from './assets/images/logo.svg';
+import './assets/css/App.css';
+
+
+
+function App() {
+  return (
+    <RecoilRoot>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          <div>
+            <Counter />
+            <CounterInfo />
+          </div>
+        </header>
+      </div>
+    </RecoilRoot>
+  );
+}
+
+export default App;

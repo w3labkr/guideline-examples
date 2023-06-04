@@ -1,0 +1,26 @@
+{
+    "name": "guideline-html",
+    "version": "1.0.0",
+    "description": "Example of html for the W3LabKr open source project.",
+    "main": "index.js",
+    "scripts": {
+        "clean:dir": "rm -rf node_modules",
+        "clean:cache": "npm cache clean --force",
+        "clean": "npm run clean:dir && npm run clean:cache",
+        "build": "npm run clean && npm install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/w3labkr/guideline-html.git"
+    },
+    "keywords": ["guideline", "html"],
+    "author": "W3LabKr",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/w3labkr/guideline-html/issues"
+    },
+    "homepage": "https://github.com/w3labkr/guideline-html#readme",
+    "devDependencies": {
+        "js-beautify": "^1.14.3"
+    }
+}

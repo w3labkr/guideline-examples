@@ -1,18 +1,7 @@
 {
     "name": "nextjs-ninja",
     "version": "0.1.0",
-    "description": "NextJS app routing starter template for TypeScript that integrates Material-ui, i18next, and Firebase.",
-    "author": "W3LabKr",
-    "keywords": [
-        "nextjs",
-        "typescript",
-        "ts",
-        "material-ui",
-        "mui",
-        "i18n",
-        "i18next",
-        "firebase"
-    ],
+    "private": true,
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -33,8 +22,6 @@
         "@mui/material": "^5.15.1",
         "@mui/material-nextjs": "^5.15.0",
         "accept-language": "^3.0.18",
-        "firebase": "^10.7.1",
-        "firebase-admin": "^12.0.0",
         "i18next": "^23.7.11",
         "i18next-browser-languagedetector": "^7.2.0",
         "i18next-resources-to-backend": "^1.2.0",

@@ -81,20 +81,6 @@ you must first install the Material Icons font.
 npm install @mui/icons-material
 ```
 
-Firebase provides the tools and infrastructure you need to develop, grow, and earn money from your app.
-
-```shell
-npm install -g firebase-tools
-npm install firebase firebase-admin
-```
-
-i18next is a very popular internationalization framework for browser or any other javascript environment (eg. Node.js, Deno).
-
-```shell
-npm install i18next react-i18next i18next-resources-to-backend accept-language
-npm install react-cookie i18next-browser-languagedetector
-```
-
 React Hooks for form state management and validation (Web + React Native).
 
 ```shell
@@ -135,30 +121,4 @@ After cleaning the directories and cache, install the dependency packages.
 
 ```shell
 npm run reinstall
-```
-
-Find and fix problems in your JavaScript code.
-
-```shell
-npx eslint ./app
-npx eslint --fix ./app
-```
-
-Start the firebase emulator.
-
-```shell
-firebase emulators:start
-```
-
-Set the expiration of a preview channel.
-
-```shell
-firebase init hosting
-firebase hosting:channel:deploy preview --expires 1h
-```
-
-Start firebase deployment.
-
-```shell
-firebase deploy
 ```

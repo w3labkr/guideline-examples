@@ -1,34 +1,59 @@
-# guideline-next-ts-mui
+# nextjs-ninja
 
-Example of php for the W3LabKr open source project. A detailed description of style guides can be found in the [guidelines](https://github.com/w3labkr/guidelines) repository.
+NextJS app routing starter template for TypeScript that integrates Material-ui, i18next, and Firebase.
 
 ## Folder and file Structure
 
-The folder and file structure is based on [NextJS API Reference](https://nextjs.org/docs/app/api-reference/file-conventions), [NextJS File Conventions](https://nextjs.org/docs/app/building-your-application/routing#file-conventions) and [Firebase document](https://firebase.google.com/codelabs/firebase-nextjs#3).
+The folder and file structure is based on nextjs app router [Next.js Project Structur](https://nextjs.org/docs/getting-started/project-structure).
 
 ```txt
 .
-├── public/                     # Static assets in the web app, like icons
-├── src/
-│   ├── app/                    # Routing with the Next.js App Router
-│   ├── components/             # React components for filters, headers
-│   └── lib/                    # Utility functions that aren't necessarily bound to React or Next.js
-├── package.json                # Project dependencies with npm
-├── package-lock.json           # Project dependencies with npm
-├── next.config.js              # Next.js-specific configuration (server actions are enabled)
-└── jsconfig.json               # JavaScript language-service configuration
+├── app/                        # App Router
+│   └── [lng]/                  # Dynamic route segment
+│   │   └── <page>/             # Route segment
+│   │   │   └── _components/    # Opt folder and all child segments out of routing
+│   │   ├── layout.ts           # Layout
+│   │   └── page.ts             # Page
+│   ├── i18n/
+│   ├── icon.ts                 # Generated App Icon
+│   ├── apple-icon.ts           # Generated Apple App Icon
+│   ├── opengraph-image.ts      # Generated Open Graph image
+│   ├── twitter-image.ts        # Generated Twitter image
+│   ├── robots.ts               # Generated Robots file
+│   └── sitemap.ts              # Generated Sitemap
+├── components/                 # React components for filters, headers
+├── configs/
+├── contexts/
+├── docs/
+├── hooks/
+├── lib/                        # Utility functions that aren't necessarily bound to React or Next.js
+│   └── firebase/               # Firebase-specific code and Firebase configuration
+├── public/                     # Static assets to be served
+├── styles/
+├── .env                        # Environment variables
+├── package.json                # Project dependencies and scripts
+├── middleware.ts               # Next.js request middleware
+├── next.config.js              # Configuration file for Next.js
+├── next-env.d.ts               # TypeScript declaration file for Next.js
+└── tsconfig.json               # Configuration file for TypeScript
 ```
 
 ## Installation
 
 - Would you like to use ESLint? … `Yes`
 - Would you like to use Tailwind CSS? … `No`
-- Would you like to use `src/` directory? … `Yes`
+- Would you like to use `src/` directory? … `No`
 - Would you like to use App Router? (recommended) … `Yes`
-- Would you like to customize the default import alias (@/*)? … `No`
+- Would you like to customize the default import alias (@/\*)? … `No`
 
 ```shell
 npx create-next-app@latest . --typescript
+```
+
+Keeping Server-only Code out of the Client Environment
+
+```shell
+npm install server-only
 ```
 
 Set the current Node.js version.
@@ -37,10 +62,16 @@ Set the current Node.js version.
 node -v > .nvmrc
 ```
 
-Install Material UI.
+Material UI is an open-source React component library that implements Google's Material Design.
 
 ```shell
-npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/material @emotion/react @emotion/styled @mui/lab
+```
+
+Next.js Integration
+
+```shell
+npm install @mui/material-nextjs @emotion/cache
 ```
 
 To use the font Icon component or the prebuilt SVG Material Icons (such as those found in the icon demos),
@@ -50,10 +81,31 @@ you must first install the Material Icons font.
 npm install @mui/icons-material
 ```
 
-(Optional) Material UI uses the Roboto font by default. Add it to your project via Fontsource.
+Firebase provides the tools and infrastructure you need to develop, grow, and earn money from your app.
 
 ```shell
-npm install @fontsource/roboto
+npm install -g firebase-tools
+npm install firebase firebase-admin
+```
+
+i18next is a very popular internationalization framework for browser or any other javascript environment (eg. Node.js, Deno).
+
+```shell
+npm install i18next react-i18next i18next-resources-to-backend accept-language
+npm install react-cookie i18next-browser-languagedetector
+```
+
+React Hooks for form state management and validation (Web + React Native).
+
+```shell
+npm install zod react-hook-form @hookform/resolvers
+# npm install yup formik
+```
+
+Generate RFC-compliant UUIDs in JavaScript
+
+```shell
+npm install uuid
 ```
 
 Start the development server.
@@ -62,33 +114,51 @@ Start the development server.
 npm run dev
 ```
 
-## Configure
+## Configuration
 
-[Minimum configuration](https://mui.com/material-ui/guides/typescript/#minimum-configuration) for typescript in MUI.
+Edit `packages.json`:
 
 ```json
 {
-  "compilerOptions": {
-    "lib": ["es6", "dom"],
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true
-  }
+    "scripts": {
+        "clean:dir": "rm -rf node_modules",
+        "clean:cache": "npm cache clean --force",
+        "clean": "npm run clean:dir && npm run clean:cache",
+        "reinstall": "npm run clean && npm install"
+    },
 }
 ```
 
 ## Usage
 
-(Optional) If you have the Roboto font installed, you can import it in your entry point like this:
+After cleaning the directories and cache, install the dependency packages.
 
-```javascript
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+```shell
+npm run reinstall
 ```
 
-## Reference
+Find and fix problems in your JavaScript code.
 
-- [Next.js App Router](https://mui.com/material-ui/guides/next-js-app-router/)
-- [Next.js App Router example in TypeScript](https://github.com/mui/material-ui/tree/master/examples/material-ui-nextjs-ts)
+```shell
+npx eslint ./app
+npx eslint --fix ./app
+```
+
+Start the firebase emulator.
+
+```shell
+firebase emulators:start
+```
+
+Set the expiration of a preview channel.
+
+```shell
+firebase init hosting
+firebase hosting:channel:deploy preview --expires 1h
+```
+
+Start firebase deployment.
+
+```shell
+firebase deploy
+```
